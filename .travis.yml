@@ -3,13 +3,7 @@ language: python
 python:
     - "3.5"
     - "3.6"
-env:
-    - TEST_SUITE='coverage run hello.py test'
+
 install: "pip install -r requirement.txt"
 script:
-    - echo $TEST_SUITE
-    - $TEST_SUITE
-affter_success:
-    - coverage report
-    - coveralls
-
+    - python hello.py
